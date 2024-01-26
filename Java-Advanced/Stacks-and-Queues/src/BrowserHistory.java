@@ -6,7 +6,7 @@ public class BrowserHistory {
         Scanner scanner = new Scanner(System.in);
 
         String input = scanner.nextLine();
-        ArrayDeque<String> arrayDeque = new ArrayDeque<String>();
+        ArrayDeque<String> arrayDeque = new ArrayDeque<>();
 
         while (scanner.hasNext()){
             if (input.equals("back")) {

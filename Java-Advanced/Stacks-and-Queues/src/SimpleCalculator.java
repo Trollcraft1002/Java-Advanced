@@ -1,6 +1,5 @@
 import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Scanner;
 
 public class SimpleCalculator {
@@ -12,7 +11,7 @@ public class SimpleCalculator {
         String[] arr = input.split(" ");
         ArrayDeque<String> arrayDeque = new ArrayDeque<>(Arrays.asList(arr));
 
-        System.out.println();;
+        System.out.println();
 
         int sum = Integer.parseInt(arrayDeque.pop());
         while (!arrayDeque.isEmpty()){
