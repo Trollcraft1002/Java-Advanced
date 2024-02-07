@@ -6,16 +6,19 @@ public class PrinterQueue {
         Scanner scanner = new Scanner(System.in);
 
         String input = scanner.nextLine();
-        String result = null;
+        StringBuilder result = new StringBuilder();
 
         ArrayDeque<String> queue = new ArrayDeque<>();
         while(!input.equals("print")){
             if(input.equals("cancel")){
 
                 if(queue.isEmpty()){
-                    System.out.println("Printer is on standby");
+                    //System.out.println("Printer is on standby");
+                    result.append("Printer is on standby\n");
+                }else {
+                    //System.out.printf("Canceled " + queue.pollFirst());
+                    result.append("Canceled ").append(queue.pollFirst()).append("\n");
                 }
-                System.out.printf("Canceled " + queue.pollFirst());
             }else{
                 queue.offer(input);
             }
@@ -25,7 +28,9 @@ public class PrinterQueue {
                 break;
             }
         }
-        
         System.out.println(result);
+        for (String que:queue) {
+            System.out.println(que);
+        }
     }
 }
