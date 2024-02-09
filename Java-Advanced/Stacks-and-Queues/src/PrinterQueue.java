@@ -25,12 +25,15 @@ public class PrinterQueue {
 
             input = scanner.nextLine();
             if(input.equals("print")){
+                if(!queue.isEmpty()){
+                    for (String que:queue) {
+                        result.append(que).append("\n");
+                    }
+                }
                 break;
             }
         }
         System.out.println(result);
-        for (String que:queue) {
-            System.out.println(que);
-        }
+
     }
 }
