@@ -16,13 +16,14 @@ public class HotPotato {
         int repeatNumber = Integer.parseInt(scanner.nextLine());
 
 
-        while(queue.size() == 1){
+        while(queue.size() > 1){
             for (int i = 1; i <= repeatNumber; i++) {
                 if(i==repeatNumber){
-                    //TODO: names.
+                  String removedPerson = queue.pop();
+                    System.out.println("Removed " + removedPerson);
                 }
             }
         }
-        System.out.println(queue);
+        System.out.println("Last is " + queue.pop());
     }
 }
