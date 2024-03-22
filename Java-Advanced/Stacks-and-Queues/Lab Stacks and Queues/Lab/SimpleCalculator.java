@@ -1,3 +1,5 @@
+package Lab;
+
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -18,13 +20,12 @@ public class SimpleCalculator {
             String command = arrayDeque.pop();
             int number = Integer.parseInt(arrayDeque.pop());
 
-            switch (command){
-                case "+":
+            switch (command) {
+                case "+" -> {
                     sum += number;
                     continue;
-
-                case "-":
-                    sum -= number;
+                }
+                case "-" -> sum -= number;
             }
         }
         System.out.println(sum);
