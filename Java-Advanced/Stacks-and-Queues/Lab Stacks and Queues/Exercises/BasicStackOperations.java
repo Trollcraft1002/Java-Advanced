@@ -1,8 +1,6 @@
-package Exercises;
-
 import java.util.ArrayDeque;
+import java.util.Collections;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 public class BasicStackOperations {
     public static void main(String[] args) {
@@ -51,8 +49,8 @@ public class BasicStackOperations {
                 System.out.println(0);
                 return;
             }
-            stack.stream().sorted();
-            System.out.println(stack.getFirst());
+
+            System.out.println(Collections.min(stack));
         }
     }
 
