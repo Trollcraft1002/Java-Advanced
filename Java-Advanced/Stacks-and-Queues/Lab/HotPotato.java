@@ -1,4 +1,5 @@
 import java.util.ArrayDeque;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class HotPotato {
@@ -18,7 +19,7 @@ public class HotPotato {
 
        while (queue.size() > 1){
            for (int i = 1; i < repeatNumber; i++) {
-               queue.offer(queue.poll());//removes the head and placing it behind of the queue.
+               queue.offer(Objects.requireNonNull(queue.poll()));//removes the head and placing it behind of the queue.
            }
            System.out.printf("Removed %s%n", queue.poll()); //using poll instead of pop to remove the first person
        }
