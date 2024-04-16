@@ -18,12 +18,10 @@ public class SimpleCalculator {
             String command = arrayDeque.pop();
             int number = Integer.parseInt(arrayDeque.pop());
 
-            switch (command) {
-                case "+" -> {
-                    sum += number;
-                    continue;
-                }
-                case "-" -> sum -= number;
+            if (command.equals("+")) {
+                sum += number;
+            } else if (command.equals("-")) {
+                sum -= number;
             }
         }
         System.out.println(sum);
