@@ -14,9 +14,7 @@ public class MaximumSumOf2x2SubMatrix {
         //creating and mapping the matrix
         for (int i = 0; i < rows; i++) {
             int[] input = Arrays.stream(scanner.nextLine().split(", ")).mapToInt(Integer::parseInt).toArray();
-            for (int j = 0; j < cols; j++) {
-                matrix[i][j] = input[j];
-            }
+            System.arraycopy(input, 0, matrix[i], 0, cols);
         }
             int sum = 0;
             int[] location = new int[4];
