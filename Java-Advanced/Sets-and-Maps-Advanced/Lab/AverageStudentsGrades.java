@@ -20,7 +20,18 @@ public class AverageStudentsGrades {
             }
         }
         for (Map.Entry<String, ArrayList<Double>> entry : grades.entrySet()) {
-            double average = entry.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble();
+            //double average = entry.getValue().stream().mapToDouble(Double::doubleValue).average().isPresent().getAsDouble();
+
+            //fixing isPromised issue in IDE
+            OptionalDouble averageOptional = entry.getValue().stream()
+                    .mapToDouble(Double::doubleValue)
+                    .average();
+            double average = 0;
+            if (averageOptional.isPresent()) {
+                 average = averageOptional.getAsDouble();
+            }
+
+
             ArrayList<Double> gradeList = entry.getValue();
             String joinedGrades = gradeList.stream()
                     .map(value -> String.format("%.2f", value))
