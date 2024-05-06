@@ -3,7 +3,7 @@ import java.io.IOException;
 
 public class ReadFile {
     public static void main(String[] args) {
-        String path = "C:\\Users\\CRAFT\\IdeaProjects\\Java-Advanced\\Java-Advanced\\Streams-Files-and-Directories\\Resources\\input.txt";
+        String path = "Java-Advanced/Streams-Files-and-Directories/Resources/input.txt";
         try (FileInputStream fileStream = new FileInputStream(path)){
             int bytesRead = fileStream.read();
 
@@ -12,6 +12,10 @@ public class ReadFile {
                 bytesRead = fileStream.read();
             }
         }
+
+
+
+
         catch (IOException e) {
             System.out.println("File not found");
         }
