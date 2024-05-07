@@ -20,7 +20,7 @@ public class WriteEveryThirdLine {
                 currentLine++;
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("error");
         }
     }
 }
