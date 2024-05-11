@@ -11,7 +11,7 @@ public class SumNumbers {
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
 
-
+        System.out.println(numbers);
 
 
     }
