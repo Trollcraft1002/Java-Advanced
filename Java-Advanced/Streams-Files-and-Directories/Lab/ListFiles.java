@@ -1,6 +1,4 @@
 import java.io.File;
-import java.util.Arrays;
-import java.util.Objects;
 
 public class ListFiles {
     public static void main(String[] args) {
