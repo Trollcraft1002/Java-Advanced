@@ -1,9 +1,7 @@
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
-import java.util.function.Function;
-import java.util.function.Predicate;
+
 
 public class FilterByAge {
     public static void main(String[] args) {
