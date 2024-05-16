@@ -10,7 +10,7 @@ public class SumNumbers {
                 .mapToInt(Integer::parseInt).toArray();
 
         //found how to use them
-        Function<int[], String> count = nums -> "Count = " + Arrays.stream(nums).count();
+        Function<int[], String> count = nums -> "Count = " + nums.length;
         Function<int[], String> sum = nums -> "Sum = " + Arrays.stream(nums).sum();
 
         System.out.println(count.apply(numbers));
